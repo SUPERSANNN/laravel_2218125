@@ -21,3 +21,5 @@ Route::get('/item/edit/{id}', [itemController::class, 'edit']);
 Route::put('/item/update/{id}', [itemController::class, 'update']);
 Route::get('/item/hapus/{id}', [itemController::class, 'delete']);
 Route::get('/item/destroy/{id}', [itemController::class, 'destroy']);
+
+Route::get('/item/cetak', [itemController::class, 'cetak']);

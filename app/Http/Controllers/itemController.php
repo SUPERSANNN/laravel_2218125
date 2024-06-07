@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\item;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class itemController extends Controller
@@ -96,6 +97,11 @@ class itemController extends Controller
         $item = item::find($id_item);
         $item->delete();
         return redirect('/item');
-
+    }
+    public function cetak()
+    {
+        $item = item::all();
+        $pdf = Pdf::loadview('item.item-cetak', compact('item'));
+        return $pdf->download('laporan-item.pdf');
     }
 }

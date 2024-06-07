@@ -7,6 +7,7 @@ Item | TopUp Game
 @section('content')
 <h3>Data Item</h3>
 <a class="tambah" href="/item/tambah">Tambah</a>
+<a class="tambah" href="/item/cetak" style="margin-left: 10px;">Cetak</a>
 <table class="table-data">
   <thead>
     <tr>
